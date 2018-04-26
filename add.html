@@ -4,11 +4,11 @@
 </head>
 <body>
 
-<h1>Hinzufuegen...</h>
+<h1>Hinzufuegen...</h1>
 <br>
 <br>
 
-<form action="add.php" method="get" target="_blank">
+<form>
   Typ:<br>
 
   <select name="Typ">
@@ -25,8 +25,17 @@
   Titel:<br>
   <input type="text" name="Titel">
   <br><br>
-  <input type="submit" value="Hinzufuegen!">
+  <input type="button" value="Hinzufuegen!" onclick="loadWithoutTarget('add.php')">
 </form> 
+
+	<script>
+	function loadWithoutTarget(adress) {
+		parameters = '';
+		var typ = document.getElementsByName("Typ");
+		parameters += 'Typ=' + typ[typ.selectedIndex].value;
+		$.get(adress)              
+	}	
+	</script>
 
 </body>
 </html>
