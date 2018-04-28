@@ -1,6 +1,7 @@
 <html>
 <head>
 <title> LTB-Verwalter-Hinzufuegen </title>
+<script src="JQuery.js"></script> <!-- jQuery Core -->
 </head>
 <body>
 
@@ -15,7 +16,7 @@
      <option value="main">Normal</option>
      <option value="Spezial">Spezial</option>
      <option value="Premium">Premium</option>
- </select>
+  </select>
   <br>
   <br>
   
@@ -30,10 +31,20 @@
 
 	<script>
 	function loadWithoutTarget(adress) {
-		parameters = '';
-		var typ = document.getElementsByName("Typ");
-		parameters += 'Typ=' + typ[typ.selectedIndex].value;
-		$.get(adress)              
+		parameters = '?';
+		
+		var typ = document.getElementsByName("Typ")[0];
+		parameters += 'Typ=' + typ.value;
+		
+		var nummer = document.getElementsByName("nummer")[0];
+		parameters += '&nummer=' + nummer.value;
+		
+		var Titel = document.getElementsByName("Titel")[0];
+		parameters += '&Titel=' + Titel.value;
+		
+		//alert(adress + parameters)
+		
+		$.get(adress + parameters)              
 	}	
 	</script>
 
