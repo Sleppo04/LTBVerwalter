@@ -24,7 +24,7 @@ $mysqli->query($sql);
 
 ?> 
 <script language="javascript" type="text/javascript">
-//window.close();
+window.close();
 </script>
 </body>
 </html>

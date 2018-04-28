@@ -1,0 +1,62 @@
+body, html {
+    height: 100%;
+	margin = 0;
+	
+}
+body{
+	margin = 0;
+	padding = 0;
+
+
+	
+	}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+
+.parallax {
+    
+    background-image: url("background.jpg");
+	margin = 0;
+	padding = 0;
+    
+    height: 100%;
+
+
+    background-attachment: fixed;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-size: 28px;
+}
+
+

@@ -1,11 +1,33 @@
+<!DOCTYPE html>
 <html>
 <head>
+//Import-Anweisungen:
+<link href="css/style.css" rel="stylesheet">
+
+<script src="js/JQuery.js"></script> <!-- jQuery Core -->
+
 </head>
-<body>
-	<div id = "container" align="center">
+</head>
+<body style="margin-top: 0px;margin-left: 0px;margin-right: 0px;margin-bottom: 0px;">
+	
+	
+	<ul>
+		<li><a onclick="load('home.php')">Home</a></li>
+		<li><a onclick="load('add.html')">Hinzuf&uumlgen</a></li>
+		<li><a onclick="load('remove.html')">Entfernen</a></li>
+		<li style="float:right"><a href="#nav">Start</a></li>
+	</ul> 
+	
+	<div class = "parallax header">
+	</div>
+	
+	
+	<a id="nav"></a>
+	<div id = "container" align="center" style="height:1000px" background-color = "black">
+	
 	</div>
 
-	<script src="JQuery.js"></script> <!-- jQuery Core -->
+	
 
 	<script>
 	load('home.php'); 
@@ -18,12 +40,6 @@
 
 	
 	</script>
-	<button onclick="load('home.php')">Home</button>
-	<button onclick="load('add.html')">Hinzufuegen...</button>
-	<button onclick="load('remove.html')">Loeschen</button>
-	<br>
-	<br>
-	<!--<div id = "container2">-->
-	</div>
+	
 	</body>
 </html>

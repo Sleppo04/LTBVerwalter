@@ -1,6 +1,7 @@
 <html>
 <head>
 <title> LTB-Verwalter-Entfernen </title>
+<script src="js/JQuery.js"></script> <!-- jQuery Core -->
 </head>
 <body>
 
@@ -9,7 +10,7 @@
 <br>
 
 
-<form action="remove.php" method="get" target="_blank">
+<form>
    <p align= center>
    
    Typ:<br>
@@ -28,9 +29,24 @@
   <input type="text" name="nummer">
   
   <br><br>
-  <input type="submit" value="entfernen!">
+  <input type="button" value="Entfernen!" onclick="loadWithoutTarget('remove.php')">
 </p>
   </form> 
-
+  <script>
+  function loadWithoutTarget(adress) {
+		parameters = '?';
+		
+		var typ = document.getElementsByName("Typ")[0];
+		parameters += 'Typ=' + typ.value;
+		
+		var nummer = document.getElementsByName("nummer")[0];
+		parameters += '&nummer=' + nummer.value;
+		
+		
+		//alert(adress + parameters)
+		
+		$.get(adress + parameters)              
+	}	
+</script>
 </body>
 </html>
