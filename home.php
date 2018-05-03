@@ -2,7 +2,7 @@
 <head>
 <title> LTB-Verwalter </title>
 </head>
-<body bgcolor="99CCFF">
+<body bgcolor="#454545">
 
 <div>
 <h1 align="center">LTB-Verwalter</h1>
